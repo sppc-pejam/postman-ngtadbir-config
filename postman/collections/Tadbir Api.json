@@ -69,9 +69,8 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "//accbook/account/:accountId/by-row/by-branch?from=<dateTime>&to=<dateTime>",
+																	"raw": "/accbook/account/:accountId/by-row/by-branch?from=<dateTime>&to=<dateTime>",
 																	"path": [
-																		"",
 																		"accbook",
 																		"account",
 																		":accountId",
@@ -154,9 +153,8 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "//accbook/account/:accountId/by-row?from=<dateTime>&to=<dateTime>",
+															"raw": "/accbook/account/:accountId/by-row?from=<dateTime>&to=<dateTime>",
 															"path": [
-																"",
 																"accbook",
 																"account",
 																":accountId",
@@ -245,9 +243,8 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "//accbook/account/:accountId/voucher-sum/by-branch?from=<dateTime>&to=<dateTime>",
+																	"raw": "/accbook/account/:accountId/voucher-sum/by-branch?from=<dateTime>&to=<dateTime>",
 																	"path": [
-																		"",
 																		"accbook",
 																		"account",
 																		":accountId",
@@ -330,9 +327,8 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "//accbook/account/:accountId/voucher-sum?from=<dateTime>&to=<dateTime>",
+															"raw": "/accbook/account/:accountId/voucher-sum?from=<dateTime>&to=<dateTime>",
 															"path": [
-																"",
 																"accbook",
 																"account",
 																":accountId",
@@ -8839,11 +8835,16 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
+									},
+									{
+										"key": "X-Tadbir-License",
+										"value": "XLJFC3hN5A8fjsAZDYOkRVvLIRT2mIUKWUa+lA6RNG+BIgPUvRmcWm/W/JscG4inz/ZNOMo16yZFf2MQ/+43LkNg7GQR7Mq3ErddilIAcKm7ejhFH5tLl6dC0tJaWWLgwFkenJpqqW05UsQ7grV6jIjhOK06rO1U2H77cuB1fH9sVri6q51VJM6RJTVLUPTNGor3PJlozcjsu1cC/HcBU5lqj27uFI2NFckcPH0GSAAJHf3Df45LPHenFOZ2o0NtqnNjsQIVOCI5cO5Ha5sxwAMGJGhe89HpGr5eLJ200E2HtlE+TjX2nlP08EIWpqYBEQpzq8IziV2uNSsgcTwc0A==",
+										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"rowNo\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"rowGuid\": \"<uuid>\",\n  \"modifiedDate\": \"<dateTime>\",\n  \"branchId\": \"<integer>\",\n  \"branchName\": \"<string>\",\n  \"enName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"socialLink\": \"<string>\",\n  \"website\": \"<string>\",\n  \"metaKeyword\": \"<string>\",\n  \"isActive\": \"<boolean>\"\n}",
+									"raw": "{\n  \"Id\": \"4\",\n  \"name\": \"بی ام وی\",\n  \"branchId\": \"1\",\n  \"branchName\": \"دفتر مرکزی\",\n  \"enName\": \"bmw\",\n  \"description\": \"\",\n  \"socialLink\": \"\",\n  \"website\": \"www.bmw.com\",\n  \"metaKeyword\": \"\",\n  \"isActive\": \"true\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -8863,7 +8864,7 @@
 									"variable": [
 										{
 											"key": "brandId",
-											"value": "<integer>"
+											"value": "4"
 										}
 									]
 								}
