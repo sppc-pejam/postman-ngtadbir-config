@@ -3387,6 +3387,18 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "New Request",
+					"id": "1e94ab32-23f9-46ff-94cd-59eb61ebe940",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "233acf35-060c-417d-b288-9ae7b5311ab1"
@@ -9176,6 +9188,425 @@
 				}
 			],
 			"id": "fc04570e-c425-4a0b-ac91-2ca713a2bca4"
+		},
+		{
+			"name": "attribute",
+			"item": [
+				{
+					"name": "{attributeId}",
+					"item": [
+						{
+							"name": "به روش آسنکرون، اطلاعات نمایشی برند مشخص شده با شناسه دیتابیسی را خوانده و برمی گرداند",
+							"id": "cd01a3e1-a8f9-47ff-a7fc-2156471961ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/brands/:brandId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands",
+										":brandId"
+									],
+									"variable": [
+										{
+											"key": "brandId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "e42d5e10-9755-426f-8647-6c8db94541c4",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/brands/:brandId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"brands",
+												":brandId"
+											],
+											"variable": [
+												{
+													"key": "brandId",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "به روش آسنکرون، اطلاعات نمایشی اصلاح شده برای یک برند موجود را پس از اعتبارسنجی در دیتابیس ذخیره می کند",
+							"id": "5c5392ca-df13-4a8b-9b87-7859422b3a00",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Tadbir-License",
+										"value": "XLJFC3hN5A8fjsAZDYOkRVvLIRT2mIUKWUa+lA6RNG+BIgPUvRmcWm/W/JscG4inz/ZNOMo16yZFf2MQ/+43LkNg7GQR7Mq3ErddilIAcKm7ejhFH5tLl6dC0tJaWWLgwFkenJpqqW05UsQ7grV6jIjhOK06rO1U2H77cuB1fH9sVri6q51VJM6RJTVLUPTNGor3PJlozcjsu1cC/HcBU5lqj27uFI2NFckcPH0GSAAJHf3Df45LPHenFOZ2o0NtqnNjsQIVOCI5cO5Ha5sxwAMGJGhe89HpGr5eLJ200E2HtlE+TjX2nlP08EIWpqYBEQpzq8IziV2uNSsgcTwc0A==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Id\": \"4\",\n  \"name\": \"بی ام وی\",\n  \"branchId\": \"1\",\n  \"branchName\": \"دفتر مرکزی\",\n  \"enName\": \"bmw\",\n  \"description\": \"\",\n  \"socialLink\": \"\",\n  \"website\": \"www.bmw.com\",\n  \"metaKeyword\": \"\",\n  \"isActive\": \"true\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/brands/:brandId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands",
+										":brandId"
+									],
+									"variable": [
+										{
+											"key": "brandId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ad8489dc-84d1-4665-b40d-20e49691abe3",
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"rowNo\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"rowGuid\": \"<uuid>\",\n  \"modifiedDate\": \"<dateTime>\",\n  \"branchId\": \"<integer>\",\n  \"branchName\": \"<string>\",\n  \"enName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"socialLink\": \"<string>\",\n  \"website\": \"<string>\",\n  \"metaKeyword\": \"<string>\",\n  \"isActive\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/brands/:brandId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"brands",
+												":brandId"
+											],
+											"variable": [
+												{
+													"key": "brandId",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "به روش آسنکرون، اطلاعات برند مشخص شده با شناسه دیتابیسی را پس از اعتبارسنجی از دیتابیس حذف می کند",
+							"id": "135323aa-454b-4255-8ed2-e0d899afa752",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/brands/:brandId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands",
+										":brandId"
+									],
+									"variable": [
+										{
+											"key": "brandId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "4ef96565-65f4-4059-aeaf-b64b28e928b8",
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/brands/:brandId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"brands",
+												":brandId"
+											],
+											"variable": [
+												{
+													"key": "brandId",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "ccc877b9-1fd4-4e71-a2b8-be30411312eb"
+				},
+				{
+					"name": "به روش آسنکرون، اطلاعات صفحه بندی شده برندها را خوانده و برمی گرداند",
+					"id": "5ed0b01a-a8e3-4a08-86d0-c2afed80863c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/brands",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "36ed0f4c-9fc7-43a7-bdf3-c4a1b1c93840",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/brands",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "به روش آسنکرون، اطلاعات نمایشی یک برند جدید را پس از اعتبارسنجی در دیتابیس ذخیره می کند",
+					"id": "a8f59f4e-e3cf-4734-ab26-66d4af5e4b0d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"rowNo\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"rowGuid\": \"<uuid>\",\n  \"modifiedDate\": \"<dateTime>\",\n  \"branchId\": \"<integer>\",\n  \"branchName\": \"<string>\",\n  \"enName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"socialLink\": \"<string>\",\n  \"website\": \"<string>\",\n  \"metaKeyword\": \"<string>\",\n  \"isActive\": \"<boolean>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/brands",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4df6797f-aacd-42f0-8f20-d386642dbd81",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"rowNo\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"rowGuid\": \"<uuid>\",\n  \"modifiedDate\": \"<dateTime>\",\n  \"branchId\": \"<integer>\",\n  \"branchName\": \"<string>\",\n  \"enName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"socialLink\": \"<string>\",\n  \"website\": \"<string>\",\n  \"metaKeyword\": \"<string>\",\n  \"isActive\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/brands",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "به روش آسنکرون، برندها داده شده را - در صورت امکان - حذف می کند",
+					"id": "6e2ccec2-597b-46e0-b005-85be4d7afa60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paraph\": \"<string>\",\n  \"items\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/brands",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "27a965ce-e601-4aae-a347-77e7388e00d4",
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"paraph\": \"<string>\",\n  \"items\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/brands",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"brands"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "e583dd2b-2655-40bc-aee0-c82ae74ad6c1"
 		},
 		{
 			"name": "cash-registers",
@@ -44771,7 +45202,7 @@
 		"apikey": [
 			{
 				"key": "value",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwiZ2l2ZW5fbmFtZSI6Itix2KfZh9io2LEg2LPbjNiz2KrZhSIsIlRhZGJpckNvbnRleHQiOnsiSWQiOjEsIlVzZXJOYW1lIjoiYWRtaW4iLCJQZXJzb25GdWxsTmFtZSI6Itix2KfZh9io2LEg2LPbjNiz2KrZhSIsIkNvbm5lY3Rpb24iOiJhaVZsajVNczJZNkdkc3lEYmRmaHpJMEJKTVgyN2hMR3pEaDZncDN2d0EvOEhGMWxRT3N4MnhTaGNyVWRoTmpsWlpqcEpFdHdYd2h3Y2VGWk5pcFBlN1FTUDQrTHd6c050WUlLU3JmMkxxaTNEOEllb3Z4MS9QVWlCL2dxTXVVODN0TWdrNWNEdEFCSDdaQ3hlcjJaRVloaGNJSktsYk9KbHJ3Q0V4UkhEdnVnTHFzMm0wbnp0bGdUTk4ySlo1QVBjamQ2dVpmVFhPc1ZKL0V5SE5VbDl4K0NMRmlPZURsOWh3TklYZnFzcmJsN2xlcFlIUGVaaEVjV3RvMEtrbUhPQkVJU0lHRkFzQUpHUHk0VWlOSWtkdz09IiwiQ29tcGFueUlkIjoyLCJCcmFuY2hJZCI6MSwiRmlzY2FsUGVyaW9kSWQiOjUsIkNvbXBhbnlOYW1lIjoi2LTYsdqp2Kog2YbZhdmI2YbZhyIsIkJyYW5jaE5hbWUiOiLYr9mB2KrYsSDZhdix2qnYstuMIiwiRmlzY2FsUGVyaW9kTmFtZSI6Itiz2KfZhCAxNDAxIiwiSW52ZW50b3J5TW9kZSI6MSwiTGFzdExvZ2luRGF0ZSI6IjIwMjMtMDktMjVUMTU6MjI6MTQuMzQzIiwiTGFuZ3VhZ2UiOiJmYSIsIlJvbGVzIjpbMV0sIlBlcm1pc3Npb25zIjpbXX0sIm5iZiI6MTY5NTY1MzE4MiwiZXhwIjoxNjk2MjU3OTgyLCJpYXQiOjE2OTU2NTMxODIsImlzcyI6InRhZGJpci1hcGkiLCJhdWQiOiJ0YWRiaXItYXBwIn0.aYVlUO8teg6T2kgiLYUwWTSOTUJzyoGZ2DHaozzDO40",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwiZ2l2ZW5fbmFtZSI6Itix2KfZh9io2LEg2LPbjNiz2KrZhSIsIlRhZGJpckNvbnRleHQiOnsiSWQiOjEsIlVzZXJOYW1lIjoiYWRtaW4iLCJQZXJzb25GdWxsTmFtZSI6Itix2KfZh9io2LEg2LPbjNiz2KrZhSIsIkNvbm5lY3Rpb24iOm51bGwsIkNvbXBhbnlJZCI6MCwiQnJhbmNoSWQiOjAsIkZpc2NhbFBlcmlvZElkIjowLCJDb21wYW55TmFtZSI6bnVsbCwiQnJhbmNoTmFtZSI6bnVsbCwiRmlzY2FsUGVyaW9kTmFtZSI6bnVsbCwiSW52ZW50b3J5TW9kZSI6MCwiTGFzdExvZ2luRGF0ZSI6IjIwMjMtMTAtMTFUMTM6MDY6MDYuMzgiLCJMYW5ndWFnZSI6bnVsbCwiUm9sZXMiOlsxXSwiUGVybWlzc2lvbnMiOltdfSwibmJmIjoxNjk3MDE3NjMyLCJleHAiOjE2OTc2MjI0MzIsImlhdCI6MTY5NzAxNzYzMiwiaXNzIjoidGFkYmlyLWFwaSIsImF1ZCI6InRhZGJpci1hcHAifQ.k60IAMUivMoOSIdxzXKV_vEQFQugux6I3HT7o67JYkA",
 				"type": "string"
 			},
 			{
@@ -44790,7 +45221,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "962073c7-f83a-4445-afc3-167e31a3617c",
+				"id": "61f8cb89-506e-4456-a618-b21ee055b939",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -44800,7 +45231,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "98a8705b-a4fd-4b28-806d-755d31115073",
+				"id": "a7edc181-49e3-4d51-9463-416c21cf6fa5",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -44810,7 +45241,7 @@
 	],
 	"variable": [
 		{
-			"id": "09606ace-ea7d-4f72-8069-da8e15a4c143",
+			"id": "9a02fc80-235e-4d3b-a78f-395364abe97d",
 			"key": "baseUrl",
 			"value": "http://localhost:9995"
 		}
